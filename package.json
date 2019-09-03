@@ -2,13 +2,18 @@
   "name": "anton_tyt_ryadom",
   "version": "4.0.4",
   "description": "a charity project",
+  "homepage": "https://kirillkushpel.github.io/Anton_tyt_Ryadom/",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && webpack --mode production",
     "dev": "webpack-dev-server --mode development --open --watch",
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirillkushpel/Anton_tyt_Ryadom.git"
+  },
+  "author": "Kirill Kushpel",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
