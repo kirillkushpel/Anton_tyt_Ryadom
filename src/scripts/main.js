@@ -7,21 +7,21 @@ export default function popup() {
   class PopUp {
     open(event) {
       if (event.target.classList.contains('user_info_button')) {
-        userPopUpDialog.classList.add('popup_is-opened')
-        userPopUpDialog.classList.add('popup_is-opened')
+        userPopUpDialog.classList.add('popup_is-opened')        
         userInfoForm.elements.name.value = ''
         userInfoForm.elements.email.value = ''
         disableSubmitButton(submitFormButton)
         document.querySelector('.header').setAttribute('style', 'visibility:hidden')
         body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
       }
       if (event.target.classList.contains('payment_button')) {
         paymentPopUpDialog.classList.add('popup_is-opened')
         checkOutForm.elements.username.value = ''
         checkOutForm.elements.usermail.value = ''
-        disableSubmitButton(submitPaymentButton)
-        let body = document.querySelector("body");
+        disableSubmitButton(submitPaymentButton)        
         body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
         document.querySelector('.header').setAttribute('style', 'visibility:hidden')
         document.querySelector('.area__budget').style.zIndex = '0'
       }
@@ -52,7 +52,7 @@ export default function popup() {
   const thanksTitle = document.querySelector('.thanks__title')
   const popUpContent = document.getElementById('payment_content')
   // модальные окна
-  const body = document.querySelector("body");
+  const body = document.querySelector("body"); 
   const userPopUpDialog = document.querySelector('#help')
   const paymentPopUpDialog = document.querySelector('#final-payment')
   const thanksPopUp = document.getElementById('thanks')
@@ -79,9 +79,7 @@ export default function popup() {
   const paymentList = document.querySelector('.payment__list')
   const helpList = document.querySelector('.help__list')
   const donateList = document.querySelector('.donate__list')
-  // изменение placeholder в модальном окне
-
-
+ 
 
   const buttonsForDonateForm = [
     { value: 100 },
@@ -111,7 +109,7 @@ export default function popup() {
   ]
 
   buttonsForPaymentForm.forEach(item => {
-    const resize = window.matchMedia('(max-width: 320px)')
+   
     let controlItem
     const listItem = document.createElement('li')
     if (!item.custom) {
@@ -124,13 +122,13 @@ export default function popup() {
       controlItem.setAttribute('data-value', 'custom')
       controlItem.classList.add('donate__button_input', 'random__sum')
 
-      if (resize.matches) {
+      if (window.screen.width == 320) {
         controlItem.placeholder = 'Другая сумма';
       } else {
         controlItem.placeholder = '0';
+        controlItem.type = 'number'
       }
-      resize.addListener(controlItem)
-      controlItem.type = 'number'
+      
     }
 
     controlItem.classList.add('payment__sum')

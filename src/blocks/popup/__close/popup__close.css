@@ -12,6 +12,11 @@
     left: 654px;
   }
 }
+@media screen and (max-width: 414px) {
+  .popup__close {
+    left: 312px;
+  }
+}
 
 @media screen and (max-width: 375px) {
   .popup__close {
@@ -22,6 +27,7 @@
 
 @media screen and (max-width: 320px) {
   .popup__close {
+    
     left: 280px;
     top: 12px;
   }
