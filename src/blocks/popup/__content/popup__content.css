@@ -14,7 +14,9 @@
   }
   #payment_help {
     position: absolute;
-    top: 250px;
+    height: 80vh;
+    padding-top: 36px;
+    bottom: 0;
   }
 }
 
@@ -36,6 +38,8 @@
     transition-timing-function: cubic-bezier(.2, .42, .63, .92);    
     padding-bottom: 10px;
     overflow: scroll;
+    bottom: 0;
+    position: absolute;
   }
 }
 
