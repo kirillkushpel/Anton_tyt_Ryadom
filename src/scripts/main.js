@@ -7,7 +7,7 @@ export default function popup() {
   class PopUp {
     open(event) {
       if (event.target.classList.contains('user_info_button')) {
-        userPopUpDialog.classList.add('popup_is-opened')        
+        userPopUpDialog.classList.add('popup_is-opened')
         userInfoForm.elements.name.value = ''
         userInfoForm.elements.email.value = ''
         disableSubmitButton(submitFormButton)
@@ -19,7 +19,7 @@ export default function popup() {
         paymentPopUpDialog.classList.add('popup_is-opened')
         checkOutForm.elements.username.value = ''
         checkOutForm.elements.usermail.value = ''
-        disableSubmitButton(submitPaymentButton)        
+        disableSubmitButton(submitPaymentButton)
         body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
         document.querySelector('.header').setAttribute('style', 'visibility:hidden')
@@ -52,7 +52,7 @@ export default function popup() {
   const thanksTitle = document.querySelector('.thanks__title')
   const popUpContent = document.getElementById('payment_content')
   // модальные окна
-  const body = document.querySelector("body"); 
+  const body = document.querySelector("body");
   const userPopUpDialog = document.querySelector('#help')
   const paymentPopUpDialog = document.querySelector('#final-payment')
   const thanksPopUp = document.getElementById('thanks')
@@ -79,7 +79,7 @@ export default function popup() {
   const paymentList = document.querySelector('.payment__list')
   const helpList = document.querySelector('.help__list')
   const donateList = document.querySelector('.donate__list')
- 
+
 
   const buttonsForDonateForm = [
     { value: 100 },
@@ -109,7 +109,7 @@ export default function popup() {
   ]
 
   buttonsForPaymentForm.forEach(item => {
-   
+
     let controlItem
     const listItem = document.createElement('li')
     if (!item.custom) {
@@ -128,7 +128,7 @@ export default function popup() {
         controlItem.placeholder = '0';
         controlItem.type = 'number'
       }
-      
+
     }
 
     controlItem.classList.add('payment__sum')
@@ -445,6 +445,7 @@ export default function popup() {
   function inputAndValueAndHeader() {
     document.querySelector('.header').style.visibility = 'visible'
     body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     document.querySelector('.area__budget').style.zIndex = '1'
     const inputButtonArray = document.querySelectorAll('.donate__button_input')
     inputButtonArray.forEach(function (elem) {

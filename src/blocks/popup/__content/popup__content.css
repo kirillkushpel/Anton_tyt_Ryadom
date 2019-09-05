@@ -12,6 +12,10 @@
   .popup__content {
     width: calc(100% - 60px);
   }
+  #payment_help {
+    position: absolute;
+    top: 250px;
+  }
 }
 
 @media screen and (max-width: 414px) {
