@@ -316,7 +316,7 @@ export default function popup() {
     data.cloudPayments = { recurrent: { interval: 'Month', period: 1, customerReceipt: receipt } } // создание ежемесячной подписки
 
     widget.charge({ // options
-      publicId: 'test_api_00000000000000000000001', // id из личного кабинета
+      publicId: 'pk_64ebf2e00a9c77ccaa40561f54c21', // id из личного кабинета
       description: 'Спасибо за помощь студентам Центра «Антон тут рядом»!', // назначение
       amount: Number(price), // сумма
       currency: 'RUB', // валюта
